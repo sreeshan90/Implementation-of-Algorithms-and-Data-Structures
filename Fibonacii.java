@@ -149,11 +149,11 @@ public class Fibonacii {
 		// TODO Auto-generated method stub
 
 		timer();
-		long res = FiboDAC(1326547894 	, 56417);
+		long res = FiboDAC(Integer.valueOf(args[0], Integer.valueOf(args[1]);
 		long time1 = elapsedTime;
 		timer();
 		timer();
-		long res2 = FiboIterative(1326547894  , 56417);
+		long res2 = FiboIterative(Integer.valueOf(args[0], Integer.valueOf(args[1]);
 		timer();
 		long time2 = elapsedTime;
 		System.out.println(res + " "+" " + time2 + " " + time1);
