@@ -84,6 +84,31 @@ public class LinkedList {
 
 		return revHead;
 	}
+	
+	/**
+	 * A method that reverses words in a string using stack
+	 */
+	
+	
+		public static void reverseWords(String s) {
+
+		String[] words = s.split(" ");
+		String rev = "";
+		Stack<String> st = new Stack<>();
+		for (int i = 0; i < words.length; i++) {
+			st.push(words[i]);
+		}
+
+		System.out.println(st.size());
+		while (!st.isEmpty()) {
+
+			rev += st.pop();
+			rev += " ";
+		}
+
+		System.out.println(rev);
+
+	}
 
 	/**
 	 * A method that strips the even and odd elements in a Linkedlist
