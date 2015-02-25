@@ -1,27 +1,37 @@
 import java.util.Iterator;
 import java.util.LinkedList;
 
+
+/**
+ * ListArithmetic class implements methods to add and subtract large integers which is otherwise not possible
+ * by traditional data types
+ */
+
 public class ListArithmetic {
 
+	/**
+	 * ListArithmetic add method adds two linked lists and returns the result
+	 */
+	
 	public static LinkedList<Integer> add(LinkedList<Integer> a,
 			LinkedList<Integer> b) {
 
-		boolean carryFlag = false;
-		LinkedList<Integer> res = new LinkedList<>();
+		boolean carryFlag = false;  // a flag to keep track of carry overs while adding
+		LinkedList<Integer> res = new LinkedList<>();// store result
 
-		if (a.isEmpty() && b.isEmpty()) {
+		if (a.isEmpty() && b.isEmpty()) { // empty input
 			return null;
 		} else {
-			while (!a.isEmpty() && !b.isEmpty()) {
+			while (!a.isEmpty() && !b.isEmpty()) { // traversing from right to left 
 
 				int sum;
 				if (carryFlag) {
-					sum = 1;
+					sum = 1; // add carry of 1 since we are adding two numbers and carry never exceeds 1
 				} else {
 					sum = 0;
 				}
 
-				if ((a.getLast() + b.getLast()) / 10 == 1) // carry
+				if ((a.getLast() + b.getLast()) / 10 == 1) // carry checking
 				{
 					carryFlag = true;
 
@@ -58,11 +68,11 @@ public class ListArithmetic {
 
 		// list A is exhausted
 
-		// check if there was a carry in previous step
+	
+		while (!b.isEmpty()) { // exhaust list b
 
-		while (!b.isEmpty()) {
-
-			int sum;
+			int sum; // local sum
+			// check if there was a carry in previously
 			if (carryFlag) {
 				sum = 1;
 			} else {
@@ -97,11 +107,12 @@ public class ListArithmetic {
 
 		// list B is exhausted
 
-		// check if there was a carry in previous step
+		
 
 		while (!a.isEmpty()) {
 
 			int sum;
+			// check if there was a carry in previous step
 			if (carryFlag) {
 				sum = 1;
 			} else {
@@ -142,6 +153,11 @@ public class ListArithmetic {
 
 	}
 
+	/**
+	 * ListArithmetic convertStringToList method converts a String to a linkedlist
+	 * @return LinkedList of integers
+	 */
+	
 	public static LinkedList<Integer> convertStringToList(String num) {
 		int result = 0;
 		int zeroAscii = 48;
@@ -157,6 +173,12 @@ public class ListArithmetic {
 		}
 		return res;
 	}
+	
+
+	/**
+	 * ListArithmetic sub method subtracts two linked lists and returns the result
+	 */
+	
 
 	public static LinkedList<Integer> sub(LinkedList<Integer> a,
 			LinkedList<Integer> b) {
@@ -188,8 +210,6 @@ public class ListArithmetic {
 			}
 
 		}
-
-		// now you know which is greater
 
 		LinkedList<Integer> res = new LinkedList<>();
 
@@ -266,6 +286,13 @@ public class ListArithmetic {
 
 		return res;
 	}
+	
+
+	/**
+	 * ListArithmetic listToString method converts a list to a String
+	 * @return String representing the number in the inpiut list
+	 * 
+	 */
 
 	public static String listToString(LinkedList<Integer> a) {
 
@@ -288,8 +315,7 @@ public class ListArithmetic {
 		System.out.println(listToString(add(
 				convertStringToList("901101010101011000"),
 				convertStringToList("901101010101011000"))));
-		
-
+		System.out.println();
 
 	}
 }
