@@ -1,0 +1,47 @@
+Comparison between:
+
+1. LinkedList - List
+2. TreeSet - Balanced Tree
+3. HashSet - Hashing
+
+Steps:
+
+1. Populated all three data structures with 20000000 elements.
+2. Time taken to insert a new element for all three data structures is measured.
+3. Time taken to delete a random element present in the data structure is measured.
+4. Time taken to find a random element present in the data structure is measured.
+
+------------------------------------------------------------------------------------------------
+
+Time taken to insert in a tree map : 2
+Time taken to insert in a linked list : 0
+Time taken to insert in a hash set : 0
+
+------------------------------------------------------------------------------------------------
+
+Time taken to delete in a tree map : 1
+Time taken to delete in a linked list : 95
+Time taken to delete in a hash set : 0
+
+------------------------------------------------------------------------------------------------
+
+Time taken to find in a tree map : 0
+Time taken to find in a linked list : 70
+Time taken to find in a hash set : 0
+
+------------------------------------------------------------------------------------------------
+
+System Configuration:
+
+Intel Core i7 processor
+8 GB  RAM
+Window 8.1
+Free Memory on HDD - 40 GB
+IDE - Eclipse
+
+
+Running:
+
+1. javac Evaluation.java
+
+2. java Evaluation -Xms2048M -Xmx45984M
