@@ -1,4 +1,4 @@
-package com.test.sreesha;
+
 /*
  *  procedure to print the elements of
  *  a singly linked list in reverse order, 
