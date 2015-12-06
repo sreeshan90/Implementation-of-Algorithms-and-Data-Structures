@@ -135,11 +135,11 @@ public class SwiftNavigationChallenge {
 	}
 
 	/**
-	 * Divide and Conquer method to calculate Fibonacii nummber
+	 *Main method of the class
 	 * 
-	 * @param n
-	 *            : long - nth fibonacci number
-	 * @return : int[][] Matrix raised to given power
+	 * @param args
+	 *            : String[] - command params
+	 * @return : void
 	 * 
 	 */
 	public static void main(String[] args) {
